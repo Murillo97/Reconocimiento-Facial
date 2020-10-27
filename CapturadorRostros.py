@@ -35,7 +35,7 @@ while True:
 	cv2.imshow('Capturando Rostro',ventana)
 
 	k =  cv2.waitKey(1)
-	if k == 27 or contador >= 300:  
+	if k == 27 or contador >= 150:  
 		break
 
 cap.release()

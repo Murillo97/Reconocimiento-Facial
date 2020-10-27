@@ -26,7 +26,9 @@ while True:
 		rostro = cv2.resize(rostro,(170,170),interpolation= cv2.INTER_CUBIC) #Tamaño de la imagen 
 		resultado = face_recognizer.predict(rostro) #devuelve la etiqueta aprendida para cada objeto 
 
-		# LBPHFace
+
+		# LBPH
+
 		if resultado[1] < 70:
 			cv2.putText(ventana,'{}'.format(carpetasImagen[resultado[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
 			cv2.rectangle(ventana, (x,y),(x+w,y+h),(0,255,0),2) #Rectangulo de la cara con grosor de 2 color verde
